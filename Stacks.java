@@ -5,39 +5,51 @@ public class Stack {
     int top = -1;
     public void push(int value) {
         if (top == MAX - 1) {
-            System.out.println("Stack Overflow");}
+            System.out.println("Stack Overflow");
+        }
         else {
             top++;
             stack[top] = value;
-            System.out.println(value + " pushed into stack");}}
+            System.out.println(value + " pushed into stack");
+        }}
     public void pop() {
         if (top == -1) {
-            System.out.println("Stack Underflow");}
+            System.out.println("Stack Underflow");
+        }
         else {
             System.out.println(stack[top] + " popped from stack");
-            top--;}}
+            top--;
+        }}
     public void peek() {
         if (top == -1) {
-            System.out.println("Stack is empty");}
+            System.out.println("Stack is empty");
+        }
         else {
-            System.out.println("Top element is: " + stack[top]);} }
+            System.out.println("Top element is: " + stack[top]);
+        } }
     public void display() {
         if (top == -1) {
-            System.out.println("Stack is empty");}
+            System.out.println("Stack is empty");
+        }
         else {
             System.out.println("\nStack Elements:");
             for (int i = top; i >= 0; i--) {
-                System.out.println(stack[i]);  }  } }
+                System.out.println(stack[i]);
+            }  } }
     public void isEmpty() {
         if (top == -1) {
-            System.out.println("Stack is Empty"); }
+            System.out.println("Stack is Empty"); 
+        }
         else {
-            System.out.println("Stack is NOT Empty"); } }
+            System.out.println("Stack is NOT Empty");
+        } }
     public void isFull() {
         if (top == MAX - 1) {
-            System.out.println("Stack is Full");  }
+            System.out.println("Stack is Full");  
+        }
         else {
-            System.out.println("Stack is NOT Full");    } }
+            System.out.println("Stack is NOT Full");  
+        } }
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         Stack s = new Stack();
@@ -66,7 +78,7 @@ public class Stack {
                     s.pop();
                     break;
                 case 3:
-                    s.peek()
+                    s.peek();
                     break;
                 case 4:
                     s.display();
@@ -84,4 +96,5 @@ public class Stack {
                     System.out.println("Invalid Choice");
             }
         } while (choice != 7);
-        input.close(); } }
+        input.close(); 
+    } }
