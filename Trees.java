@@ -4,7 +4,7 @@ class Node {
     Node(int data) {
         this.data = data;
         left = right = null; 
-}
+    }
 }
 public class BinaryTree {
     Node root;
